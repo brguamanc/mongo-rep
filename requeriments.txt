@@ -1,0 +1,6 @@
+Flask
+pymongo
+json_util
+gunicorn
+bson
+flask_cors
