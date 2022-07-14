@@ -12,11 +12,6 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 cors=CORS(app)
 #Rutas de la aplicación
 
-@app.route('/', methods=['GET'])
-@cross_origin()
-def home():
-    mensajes = {"Mensaje":"Bienvenido al api de MongoDB"}
-    return mensajes
 
 
 @app.route('/mongo_audit', methods=['POST'])
@@ -56,6 +51,11 @@ def notFound(error=None):
     return response
 
 
+@app.route('/', methods=['GET'])
+@cross_origin()
+def index():
+    mensajes = {"Mensaje":"Bienvenido al api de MongoDB"}
+    return mensajes
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0")
