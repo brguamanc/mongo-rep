@@ -1,6 +1,6 @@
 gunicorn
 Flask
 pymongo
-json_util
+certifi
 bson
 flask_cors
